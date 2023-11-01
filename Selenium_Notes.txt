@@ -1,0 +1,26 @@
+options.add_experimental_option("detach", True)
+"Keeping the window open"
+----------------------------------------------------------------------------------------------------------------------------------------
+
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
+"The code is used to configure the Chrome WebDriver to exclude the "enable-logging" switch. This switch controls whether or not Chrome logs its activities. By excluding it, you prevent Chrome from generating logs, which can be useful for cleaner automation output. When you set up a Chrome WebDriver using these options, it will not enable Chrome's logging feature, which can help keep your automation output more concise."
+----------------------------------------------------------------------------------------------------------------------------------------
+
+options.add_experimental_option("excludeSwitches", ["enable-automation"])
+"This code configures the browser options to exclude the "enable-automation" switch. This helps in preventing websites from detecting that the browser is being automated."
+----------------------------------------------------------------------------------------------------------------------------------------
+
+options.add_experimental_option('useAutomationExtension', False)
+"This code sets the "useAutomationExtension" option to 'False', which disables the automation extension in the browser. This extension is often used by automated tools and can be a signal to websites that automation is taking place."
+----------------------------------------------------------------------------------------------------------------------------------------
+
+First of all, when you try to create a chrome instance you need to create a new profile as well, for that instance. Here is a command for that: In order to run this command, you will have to add chrome to system path or go to the directory where chrome is installed, for windows it is usually this path: C:\Program Files (x86)\Google\Chrome\Application
+
+Method 1 : options.add_experimental_option("debuggerAddress", "127.0.0.1:8585")
+Method 2 : options.add_experimental_option("debuggerAddress","localhost:8585")
+
+"The code is typically used when you want to connect to an existing instance of a web browser's developer tools or debugger for debugging purposes. You're configuring your web automation script to connect to a browser instance running on your local machine at address "localhost" and port "8585" for debugging. This allows you to inspect and debug the browser as it's controlled by your automation script."
+----------------------------------------------------------------------------------------------------------------------------------------
+
+chrome_options.add_argument("--incognito")
+"The code is used when configuring a Chrome web browser to open in incognito or private browsing mode. Incognito mode allows for private and secure browsing sessions by not storing browsing history, cookies, or other personal information. When you use chromeOptions in your Selenium WebDriver configuration, the browser will open in incognito mode, ensuring that your browsing activities are not recorded or saved locally."
